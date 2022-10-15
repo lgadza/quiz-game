@@ -1,34 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@1&family=Fjalla+One&display=swap");
 body {
   background-color: coral;
   font-family: "creepster";
 }
 h1 {
   display: flex;
-  /* background-color: white; */
   justify-content: center;
   align-items: center;
-  margin-top: 20vh;
-  /* color: white; */
+  margin-top: 15vh;
 }
 #container {
-  /* display: flex; */
   background-color: blanchedalmond;
+  /* font-family: "fjalla"; */
+  /* font-size: 1.5em; */
+  font-weight: bold;
+  /* display: flex; */
   /* justify-content: center; */
-  /* align-items: center; */
+  /* padding-top: 50px; */
   width: 500px;
-  height: 50vh;
+  height: 40vh;
   margin: auto;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 #h2 {
   /* position: relative; */
-  margin-top: 20px !important;
+  /* margin-top: 20px !important; */
   display: block;
-  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 500px;
+  /* height: 50vh; */
+  margin: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: blanchedalmond;
 }
 h2 {
   position: relative;
@@ -89,7 +97,7 @@ button {
   /* display: flex; */
   width: 60px;
   height: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 45%;
   color: coral;
   font-weight: bold;
@@ -135,7 +143,7 @@ button {
   transform: translateX(-63px);
 }
 #info {
-  margin-top: 40px !important;
+  margin-top: 50px !important;
   display: block;
   padding-top: 20px;
   display: flex;
@@ -151,4 +159,13 @@ button {
   align-items: center;
   font-size: 11px;
   font-family: "Times New Roman", Times, serif;
+}
+input {
+  /* margin-top: 10px; */
+  margin-left: 42%;
+  /* transform: translateY(50px); */
+  font-weight: bold;
+  color: coral;
+  width: 80px;
+  text-align: center;
 }
