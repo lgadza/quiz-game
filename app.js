@@ -1,4 +1,7 @@
 let count = 0;
+let getBackBtn = document.createElement("button");
+
+getBackBtn.classList = "myBtn start";
 
 let container = document.querySelector("#container");
 document.getElementById("myBtn2").onclick = function () {
@@ -7,15 +10,14 @@ document.getElementById("myBtn2").onclick = function () {
   let newDiv2 = document.createElement("div");
   let getBackBtn = document.createElement("button");
   let quitBtn = document.createElement("button");
-  getBackBtn.className = "start";
-  getBackBtn.classList = "myBtn";
+  getBackBtn.classList = "myBtn start";
+  getBackBtn.setAttribute("id", "start");
   let class1 = document.createTextNode("start");
   getBackBtn.appendChild(class1);
   getBackBtn.innerText = "Start";
   newDiv2.appendChild(getBackBtn);
   newDiv2.appendChild(quitBtn);
-  quitBtn.className = "quit";
-  quitBtn.classList = "myBtn2";
+  quitBtn.classList = " quit myBtn2";
   quitBtn.innerText = "Quit";
   newDiv.innerText = "You quitted";
   newDiv.style.display = "flex";
@@ -26,7 +28,7 @@ document.getElementById("myBtn2").onclick = function () {
   container.appendChild(newDiv);
   container.appendChild(newDiv2);
 };
-document.querySelector(".myBtn").onclick = function () {
+document.querySelectorAll(".start").onclick = function () {
   let container = document.querySelector("#container");
 
   container.innerHTML = "";
@@ -34,11 +36,7 @@ document.querySelector(".myBtn").onclick = function () {
   let newDiv2 = document.createElement("div");
   let submit = document.createElement("button");
   let quitBtn = document.createElement("button");
-  quitBtn.className = "myBtn2";
-  submit.className = "myBtn";
   let answers = document.createElement("ol");
-  submit.className = "start";
-  submit.classList = "myBtn2";
 
   let class1 = document.createTextNode("start");
   submit.appendChild(class1);
@@ -58,7 +56,7 @@ document.querySelector(".myBtn").onclick = function () {
   let input = document.createElement("input");
   input.type = "text";
 
-  submit.className = "submit";
+  // submit.classList = "submit myBtn";
   submit.innerText = "Submit";
   newDiv2.style.padding = "0px";
   newDiv2.style.marginBottom = "40px";
@@ -67,7 +65,7 @@ document.querySelector(".myBtn").onclick = function () {
   newDiv2.append(input);
   newDiv2.appendChild(submit);
   newDiv2.appendChild(quitBtn);
-  quitBtn.className = "quit";
+  // quitBtn.classList = "quit myBtn2";
   quitBtn.innerText = "Quit";
   newDiv.innerText = "What does CPU stand for?";
   newDiv.style.marginLeft = "30%";
@@ -107,7 +105,7 @@ document.getElementById("myBtn").onclick = function () {
   let input = document.createElement("input");
   input.type = "text";
 
-  submit.className = "submit";
+  submit.classList = "submit myBtn";
   submit.innerText = "Submit";
   newDiv2.style.padding = "0px";
   newDiv2.style.marginBottom = "40px";
@@ -116,7 +114,7 @@ document.getElementById("myBtn").onclick = function () {
   newDiv2.append(input);
   newDiv2.appendChild(submit);
   newDiv2.appendChild(quitBtn);
-  quitBtn.className = "quit";
+  quitBtn.classList = "quit myBtn2";
   quitBtn.innerText = "Quit";
   newDiv.innerText = "What does CPU stand for?";
   newDiv.style.marginLeft = "30%";
@@ -131,3 +129,19 @@ document.getElementById("myBtn").onclick = function () {
   container.appendChild(newDiv);
   container.appendChild(newDiv2);
 };
+
+let quitBtn = document.querySelectorAll(".quit");
+for (let i = 0; i < quitBtn.length; i++) {
+  quit[i].onclick = function quit() {
+    let clearDiv = document.getElementById("container");
+    clearDiv.innerHTML = "";
+    let quitContent = document.createElement("div");
+    let h3 = document.createAttribute.Element("h3");
+    h3.innerText = `Thank you for trying!
+     Byee :)`;
+    h3.createTextNode("content");
+    h3.appendChild(content);
+    quitContent.appendChild(h3);
+    container.appendChild(quitContent);
+  };
+}
